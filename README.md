@@ -25,4 +25,4 @@ https://github.com/spring-projects/sts4/wiki/Previous-Versions
 https://github.com/vincenttuan/2022-SpringSecurity-01-Authenication/blob/main/SpringSecurity_Authenication.pdf
 
 <h2>上課影音連結</h2>
-製作中...
+製作中...（密切注意）

@@ -34,6 +34,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeHttpRequests()
 			// 不需要被認證的頁面：/loginpage
 			.antMatchers("/loginpage").permitAll()
+			// 權限判斷
+			// 必須要有 admin 權限才可以訪問
+			.antMatchers("/adminpage").hasAuthority("admin")
+			// 必須要有 manager 角色才可以訪問
+			.antMatchers("/managerpage").hasRole("manager")
+			// 其他指定任意角色都可以訪問
+			.antMatchers("/employeepage").hasAnyRole("manager", "employee")
 			// 其他的都要被認證
 			.anyRequest().authenticated();
 		

@@ -21,7 +21,8 @@ https://github.com/spring-projects/sts4/wiki/Previous-Versions
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"&gt;
 </pre>
 
-<h2>PDF 檔案</h2>
+<h2>上課 PDF 檔案</h2>
 https://github.com/vincenttuan/2022-SpringSecurity-01-Authenication/blob/main/SpringSecurity_Authenication.pdf
 
-
+<h2>上課影音連結</h2>
+製作中...

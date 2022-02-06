@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+<meta charset="UTF-8">
+<title>Login form</title>
+</head>
+<body style="padding: 20px">
+	<form class="pure-form" method="post" action="/login">
+    <fieldset>
+        <legend>Login form</legend>
+        <input type="text" placeholder="input username" name="username" />
+        <p />
+        <input type="password" placeholder=" input password" name="password" />
+        <p />
+        <input type="text" th:value="${_csrf.token}" name="_csrf" th:if="${_csrf}" />
+        <p />
+        <input type="checkbox" name="remember-me" value="true" /> remember me
+        <p />
+        <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+        
+    </fieldset>
+</form>
+</body>
+</html>

@@ -10,9 +10,11 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 import com.example.demo.repository.UserDao;
 
+@Service
 public class UserDetialsServiceImpl implements UserDetailsService {
 	
 	@Autowired

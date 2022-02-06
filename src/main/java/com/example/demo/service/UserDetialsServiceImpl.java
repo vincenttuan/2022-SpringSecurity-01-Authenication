@@ -24,7 +24,7 @@ public class UserDetialsServiceImpl implements UserDetailsService {
 		Optional<Entry<String, Map<String, String>>> opt= userDao.users
 					.entrySet()
 					.stream()
-					.filter(e -> e.getKey().equals("username"))
+					.filter(e -> e.getKey().equals(username))
 					.findFirst();
 		if(!opt.isPresent()) throw new UsernameNotFoundException("Not found!");
 		

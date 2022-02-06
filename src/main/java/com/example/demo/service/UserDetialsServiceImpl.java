@@ -22,6 +22,7 @@ public class UserDetialsServiceImpl implements UserDetailsService {
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		System.out.println("loadUserByUsername: " + username);
 		// 1. 查詢用戶是否存在 ?
 		Optional<Entry<String, Map<String, String>>> opt= userDao.users
 					.entrySet()

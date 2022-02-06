@@ -10,12 +10,17 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
+import com.example.demo.handle.MyAccessDeniedHandler;
+
 // 若要自訂登入邏輯則要繼承 WebSecurityConfigurerAdapter
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
 	private UserDetailsService UserDetailsService;
+	
+	@Autowired
+	private MyAccessDeniedHandler myAccessDeniedHandler;
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -51,6 +56,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.deleteCookies("JSESSIONID")
 			.logoutSuccessUrl("/loginpage")
 			.logoutRequestMatcher(new AntPathRequestMatcher("/logout")); // 可以使用任何的 HTTP 方法登出
+	
+		// 異常處理
+		http.exceptionHandling()
+			.accessDeniedHandler(myAccessDeniedHandler);
 	}
 
 	// 注意！規定！要建立密碼演算的實例

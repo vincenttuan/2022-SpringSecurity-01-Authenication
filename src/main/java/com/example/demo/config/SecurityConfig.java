@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 // 若要自訂登入邏輯則要繼承 WebSecurityConfigurerAdapter
 @Configuration
@@ -35,6 +36,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers("/loginpage").permitAll()
 			// 其他的都要被認證
 			.anyRequest().authenticated();
+		
+		// http.csrf().disable(); // 關閉 csrf 防護
+		
+		// 登出
+		http.logout()
+			.deleteCookies("JSESSIONID")
+			.logoutSuccessUrl("/loginpage")
+			.logoutRequestMatcher(new AntPathRequestMatcher("/logout")); // 可以使用任何的 HTTP 方法登出
 	}
 
 	// 注意！規定！要建立密碼演算的實例

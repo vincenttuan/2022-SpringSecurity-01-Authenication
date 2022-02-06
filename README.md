@@ -20,3 +20,8 @@ https://github.com/spring-projects/sts4/wiki/Previous-Versions
 &lt;html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"&gt;
 </pre>
+
+<h2>PDF 檔案</h2>
+https://github.com/vincenttuan/2022-SpringSecurity-01-Authenication/blob/main/SpringSecurity_Authenication.pdf
+
+

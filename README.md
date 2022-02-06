@@ -19,5 +19,5 @@ https://github.com/spring-projects/sts4/wiki/Previous-Versions
 <h2>Thymeleaf 宣告：</h2>
 <br /><pre>
 &lt;html xmlns:th="http://www.thymeleaf.org"
-	  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"&gt;
+     xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"&gt;
 </pre>

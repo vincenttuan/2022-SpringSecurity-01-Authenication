@@ -5,7 +5,7 @@ Java SDK版本：Java 8<br />
 STS 開發工具：STS 4.7.1<br />
 </h1>
 
-<h2>上課影音連結</h2>
+<h2>上課 youtube 影音連結（錄影）</h2>
 https://www.youtube.com/watch?v=n2sH5-Vko1M&ab_channel=%E6%AE%B5%E7%B6%AD%E7%80%9A
 
 <h2>上課 PDF 檔案</h2>

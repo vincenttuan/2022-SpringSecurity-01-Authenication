@@ -1,5 +1,5 @@
 # 2022 SpringSecurity Authenication and authorization
-2022 SpringSecurity-01 認證與授權篇
+2022 SpringSecurity-01 認證與授權篇 (直播教學)
 <h1>
 Java SDK版本：Java 8<br />
 STS 開發工具：STS 4.7.1<br />
